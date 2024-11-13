@@ -31,7 +31,7 @@ spec:
  initContainers:
  - name: init-html
  image: curlimages/curl
- command: ["sh", "-c", "curl -o /usr/share/nginx/html/index.html https://raw.githubusercontent.com/xander0328/kuber-activity/master/index.html"] #change this
+ command: ["sh", "-c", "curl -o /usr/share/nginx/html/index.html https://raw.githubusercontent.com/xander0328/kuber-actvity/master/index.html"] #change this
  volumeMounts:
  - name: html-volume
  mountPath: /usr/share/nginx/html
