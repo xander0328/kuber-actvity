@@ -15,7 +15,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: k8s-activity-yourname #change this
+ name: k8s-activity-xander0328 #change this
  labels:
  app: nginx
 spec:
