@@ -15,7 +15,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-activity-xander0328 # change this to your specific name
+  name: k8s-activity-xander0328 # Change "yourname" to your actual name or identifier
   labels:
     app: nginx
 spec:
@@ -31,10 +31,11 @@ spec:
       initContainers:
         - name: init-html
           image: curlimages/curl
-          command:
-            - "sh"
-            - "-c"
-            - "curl -o /usr/share/nginx/html/index.html https://raw.githubusercontent.com/xander0328/kuber-actvity/master/index.html" # change this if needed
+          command: [
+              "sh",
+              "-c",
+              "curl -o /usr/share/nginx/html/index.html https://raw.githubusercontent.com/xander0328/kuber-actvity/master/index.html",
+            ] # Change URL if necessary
           volumeMounts:
             - name: html-volume
               mountPath: /usr/share/nginx/html
